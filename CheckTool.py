@@ -1,5 +1,7 @@
 import os 
-
+CURRENT_WORKDIR = os.getcwd()
+sys.path.append(CURRENT_WORKDIR)
+import GeneralTool.Colors
 def CheckDir(Dir_to_check="",MakeDir=True,quiet=False):
     '''
         Just check whether a folder is existed or not. If it is not, then create a new one.

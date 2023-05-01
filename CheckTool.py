@@ -10,11 +10,11 @@ def CheckDir(Dir_to_check="",MakeDir=True,quiet=False):
     if os.path.isdir(Dir_to_check): return True
     else:
         if not quiet:
-            print("\n"+Colors.LIGHT_GREEN+"Warning"+Colors.END+": You don't have directory: "+Colors.YELLOW+Colors.UNDERLINE+"{}"+Colors.END+" under "+Colors.BROWN+Colors.UNDERLINE+"{}".format(Dir_to_check, CURRENT_WORKDIR)+Colors.END)
+            print("\n"+Colors.LIGHT_GREEN+"Warning"+Colors.END+": You don't have directory: "+Colors.YELLOW+Colors.UNDERLINE+ f"{Dir_to_check}"+Colors.END+" under "+Colors.BROWN+Colors.UNDERLINE+f"{CURRENT_WORKDIR}"+Colors.END)
         if MakeDir:
             os.system('mkdir -p {}'.format(os.path.join(CURRENT_WORKDIR,Dir_to_check)))
             if not quiet:
-                print("\n \033[0;32m Warning \033[0;m: Dir-> \033[0;32m{}\033[0;m is made now.\n".format(Dir_to_check))
+                print(f"\n \033[0;32m Warning \033[0;m: Dir-> \033[0;32m{Dir_to_check}\033[0;m is made now.\n")
         else:pass
         if not quiet:
             print("")

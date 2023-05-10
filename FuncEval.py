@@ -6,7 +6,7 @@ import os ,sys
 CURRENT_WORKDIR = os.getcwd()
 sys.path.append(CURRENT_WORKDIR)
 from GeneralTool.Colors import Colors
-import GeneralTool.ShellStyles
+from GeneralTool import ShellStyles
 
 def convert_size(size_bytes) -> str:
     if size_bytes == 0:

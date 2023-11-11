@@ -10,7 +10,6 @@ import hashlib
 import imp
 import re
 import stat
-import ROOT
 import ctypes
 import getpass
 import socket
